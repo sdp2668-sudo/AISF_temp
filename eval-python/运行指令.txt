@@ -1,0 +1,10 @@
+cd C:\Users\admin\Desktop\l30076801\AISF_0730_segment\AISF_temp-main\eval-python
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -e .
+
+
+python -m eval_python run `
+  --input data\sessions_case.json `
+  --config config\qwen.example.yaml `
+  --output-dir output

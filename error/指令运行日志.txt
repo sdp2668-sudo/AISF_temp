@@ -1,0 +1,81 @@
+Windows PowerShell
+版权所有 (C) Microsoft Corporation。保留所有权利。
+
+尝试新的跨平台 PowerShell https://aka.ms/pscore6
+
+PS C:\Users\admin\Desktop\l30076801\AISF_0730_segment\AISF_temp-main\eval-python> cd C:\Users\admin\Desktop\l30076801\AISF_0730_segment\AISF_temp-main\eval-python
+PS C:\Users\admin\Desktop\l30076801\AISF_0730_segment\AISF_temp-main\eval-python> python -m venv .venv
+PS C:\Users\admin\Desktop\l30076801\AISF_0730_segment\AISF_temp-main\eval-python> .\.venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate.ps1 : 无法加载文件 C:\Users\admin\Desktop\l30076801\AISF_0730_segment\AISF_temp-main\eval-pyth
+on\.venv\Scripts\Activate.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 https:/go.microsoft.com/fwlink/?LinkID=
+135170 中的 about_Execution_Policies。
+所在位置 行:1 字符: 1
++ .\.venv\Scripts\Activate.ps1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) []，PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\Users\admin\Desktop\l30076801\AISF_0730_segment\AISF_temp-main\eval-python> python -m pip install -e .
+Obtaining file:///C:/Users/admin/Desktop/l30076801/AISF_0730_segment/AISF_temp-main/eval-python
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... done
+Collecting openpyxl>=3.1 (from eval-python==0.1.0)
+  Obtaining dependency information for openpyxl>=3.1 from https://files.pythonhosted.org/packages/c0/da/977ded879c29cbd04de313843e76868e6e13408a94ed6b987245dc7c8506/openpyxl-3.1.5-py2.py3-none-any.whl.metadata
+  Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting PyYAML>=6.0 (from eval-python==0.1.0)
+  Obtaining dependency information for PyYAML>=6.0 from https://files.pythonhosted.org/packages/da/e3/ea007450a105ae919a72393cb06f122f288ef60bba2dc64b26e2646fa315/pyyaml-6.0.3-cp311-cp311-win_amd64.whl.metadata
+  Downloading pyyaml-6.0.3-cp311-cp311-win_amd64.whl.metadata (2.4 kB)
+Requirement already satisfied: requests>=2.31 in c:\users\admin\appdata\roaming\python\python311\site-packages (from eval-python==0.1.0) (2.34.2)
+Collecting et-xmlfile (from openpyxl>=3.1->eval-python==0.1.0)
+  Obtaining dependency information for et-xmlfile from https://files.pythonhosted.org/packages/c1/8b/5fe2cc11fee489817272089c4203e679c63b570a5aaeb18d852ae3cbba6a/et_xmlfile-2.0.0-py3-none-any.whl.metadata
+  Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\users\admin\appdata\roaming\python\python311\site-packages (from requests>=2.31->eval-python==0.1.0) (3.4.9)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\admin\appdata\roaming\python\python311\site-packages (from requests>=2.31->eval-python==0.1.0) (3.18)
+Requirement already satisfied: urllib3<3,>=1.26 in c:\users\admin\appdata\roaming\python\python311\site-packages (from requests>=2.31->eval-python==0.1.0) (2.7.0)
+Requirement already satisfied: certifi>=2023.5.7 in c:\users\admin\appdata\roaming\python\python311\site-packages (from requests>=2.31->eval-python==0.1.0) (2026.7.22)
+Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+   ---------------------------------------- 250.9/250.9 kB 25.5 kB/s eta 0:00:00
+Downloading pyyaml-6.0.3-cp311-cp311-win_amd64.whl (158 kB)
+   ---------------------------------------- 158.8/158.8 kB 20.9 kB/s eta 0:00:00
+Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Building wheels for collected packages: eval-python
+  Building editable for eval-python (pyproject.toml) ... done
+  Created wheel for eval-python: filename=eval_python-0.1.0-0.editable-py3-none-any.whl size=4402 sha256=ffc1fae48c34960424be8d0d5c2be7f630560a1b6f34508fb24d7e2bda0e053d
+  Stored in directory: C:\Users\admin\AppData\Local\Temp\pip-ephem-wheel-cache-jk8jmgk3\wheels\01\a4\69\1c461457f3e0d5393e1bdb7aa98982239e010285160b47bb45
+Successfully built eval-python
+Installing collected packages: PyYAML, et-xmlfile, openpyxl, eval-python
+Successfully installed PyYAML-6.0.3 et-xmlfile-2.0.0 eval-python-0.1.0 openpyxl-3.1.5
+
+[notice] A new release of pip is available: 23.2.1 -> 26.1.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+PS C:\Users\admin\Desktop\l30076801\AISF_0730_segment\AISF_temp-main\eval-python> python -m eval_python run `
+>>   --input data\sessions_case.json `
+>>   --config config\qwen.example.yaml `
+>>   --output-dir output
+segmentation: 2 sessions
+scenario: 0 segments
+complete: 0 segments in 0.037s
+{
+  "json": "C:\\Users\\admin\\Desktop\\l30076801\\AISF_0730_segment\\AISF_temp-main\\eval-python\\output\\sessions_case__Qwen3-32B__20260730T081345.266118-0000-2fcebab1.json",
+  "xlsx": "C:\\Users\\admin\\Desktop\\l30076801\\AISF_0730_segment\\AISF_temp-main\\eval-python\\output\\sessions_case__Qwen3-32B__20260730T081345.266118-0000-2fcebab1.xlsx",
+  "summary": {
+    "sessions": 2,
+    "sessions_succeeded": 0,
+    "sessions_partial_failed": 0,
+    "sessions_failed": 2,
+    "sessions_filtered": 0,
+    "episodes": 0,
+    "episodes_filtered": 0,
+    "segments": 0,
+    "segments_failed": 0,
+    "turn_rows": 0,
+    "model_calls": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "model_elapsed_seconds": 0,
+    "errors": 2
+  }
+}
+PS C:\Users\admin\Desktop\l30076801\AISF_0730_segment\AISF_temp-main\eval-python>

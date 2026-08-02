@@ -1,0 +1,44 @@
+[
+  {
+    "session_id": "session-example-001",
+    "user_id": "user-example-001",
+    "turn_count": 5,
+    "turns": [
+      {
+        "turn_no": 1,
+        "human": "打开酷狗",
+        "ai": "已为您打开酷狗",
+        "rewrite_query": "打开酷狗音乐",
+        "timestamp": "2026-07-27T10:00:00+08:00"
+      },
+      {
+        "turn_no": 2,
+        "human": "播放周杰伦的青花瓷",
+        "ai": "正在为您播放周杰伦的青花瓷",
+        "rewrite_query": "播放歌曲青花瓷",
+        "timestamp": "2026-07-27T10:01:00+08:00"
+      },
+      {
+        "turn_no": 3,
+        "human": "暂停",
+        "ai": "已暂停",
+        "rewrite_query": null,
+        "timestamp": "2026-07-27T10:02:00+08:00"
+      },
+      {
+        "turn_no": 4,
+        "human": "今天天气怎么样",
+        "ai": "今天晴，最高温度二十八度",
+        "rewrite_query": "查询今天天气",
+        "timestamp": "2026-07-27T10:40:00+08:00"
+      },
+      {
+        "turn_no": 5,
+        "human": "明天呢",
+        "ai": "明天多云，最高温度二十六度",
+        "rewrite_query": "查询明天天气",
+        "timestamp": "2026-07-27T10:41:00+08:00"
+      }
+    ]
+  }
+]

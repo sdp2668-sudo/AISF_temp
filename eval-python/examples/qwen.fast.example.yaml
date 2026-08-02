@@ -1,0 +1,32 @@
+taxonomy_path: ../config/scenario-taxonomy.json
+
+model:
+  endpoint: http://9.15.87.94:1065/v1/chat/completions
+  name: Qwen3-32B
+  api_key_env: null
+  temperature: 0.0
+  enable_thinking: false
+  verify_tls: false
+  bypass_proxy: true
+  connect_timeout_seconds: 10
+  read_timeout_seconds: 120
+  max_retries: 2
+  retry_backoff_seconds: 2
+
+features:
+  enable_subscene: false
+  enable_ai_unsupported: false
+
+pipeline:
+  episode_gap_minutes: 30
+  segment_window_size: 8
+  session_concurrency: 2
+  segment_concurrency: 2
+  max_agent_rounds: 120
+
+filters:
+  excluded_user_ids: []
+  max_episode_turns: null
+
+output:
+  include_raw_model_response: false

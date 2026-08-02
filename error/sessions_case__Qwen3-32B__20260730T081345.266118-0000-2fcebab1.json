@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "source_baseline": "eval-agent/AIsayno@cfd3cc71d3f29ab99557d02fa92c5bd3bb2ef6c5",
+  "run_id": "20260730T081345.266118+0000-2fcebab1",
+  "input_file": "C:\\Users\\admin\\Desktop\\l30076801\\AISF_0730_segment\\AISF_temp-main\\eval-python\\data\\sessions_case.json",
+  "started_at": "2026-07-30T08:13:45.266118+00:00",
+  "completed_at": "2026-07-30T08:13:45.303105+00:00",
+  "elapsed_seconds": 0.037448,
+  "model": {
+    "endpoint": "http://9.15.87.94:1065/v1/chat/completions",
+    "name": "Qwen3-32B",
+    "temperature": 0.0,
+    "enable_thinking": true
+  },
+  "features": {
+    "enable_subscene": false,
+    "enable_ai_unsupported": false
+  },
+  "filters": {
+    "excluded_user_ids": [],
+    "max_episode_turns": null,
+    "excluded_items": []
+  },
+  "summary": {
+    "sessions": 2,
+    "sessions_succeeded": 0,
+    "sessions_partial_failed": 0,
+    "sessions_failed": 2,
+    "sessions_filtered": 0,
+    "episodes": 0,
+    "episodes_filtered": 0,
+    "segments": 0,
+    "segments_failed": 0,
+    "turn_rows": 0,
+    "model_calls": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "model_elapsed_seconds": 0,
+    "errors": 2
+  },
+  "metrics": [],
+  "errors": [
+    {
+      "stage": "segmentation",
+      "session_id": "om_session_81d30314b0d6d435e08850bca272e50a",
+      "episode_id": "",
+      "segment_id": "",
+      "error_type": "ModelError",
+      "message": "Qwen HTTP 400: \"auto\" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set"
+    },
+    {
+      "stage": "segmentation",
+      "session_id": "om_session_0b6340bc2a2e74f2079f5cc4cc749c29",
+      "episode_id": "",
+      "segment_id": "",
+      "error_type": "ModelError",
+      "message": "Qwen HTTP 400: \"auto\" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set"
+    }
+  ],
+  "sessions": [
+    {
+      "session_id": "om_session_81d30314b0d6d435e08850bca272e50a",
+      "user_id": "078y95540104883550",
+      "status": "failed",
+      "error": {
+        "stage": "segmentation",
+        "session_id": "om_session_81d30314b0d6d435e08850bca272e50a",
+        "episode_id": "",
+        "segment_id": "",
+        "error_type": "ModelError",
+        "message": "Qwen HTTP 400: \"auto\" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set"
+      },
+      "turn_count": 15,
+      "elapsed_seconds": 0.0,
+      "episodes": []
+    },
+    {
+      "session_id": "om_session_0b6340bc2a2e74f2079f5cc4cc749c29",
+      "user_id": "668y96622840000050",
+      "status": "failed",
+      "error": {
+        "stage": "segmentation",
+        "session_id": "om_session_0b6340bc2a2e74f2079f5cc4cc749c29",
+        "episode_id": "",
+        "segment_id": "",
+        "error_type": "ModelError",
+        "message": "Qwen HTTP 400: \"auto\" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set"
+      },
+      "turn_count": 25,
+      "elapsed_seconds": 0.0,
+      "episodes": []
+    }
+  ]
+}

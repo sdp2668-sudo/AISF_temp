@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eval-python"
+version = "0.1.0"
+description = "Qwen-based Session Episode/Segment evaluation and offline comparison"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "openpyxl>=3.1",
+  "PyYAML>=6.0",
+  "requests>=2.31",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
