@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eval-evaluation"
+version = "0.1.0"
+description = "Episode-level Qwen versus DeepSeek segment evaluation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["openpyxl>=3.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
