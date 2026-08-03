@@ -1,0 +1,21 @@
+{
+  "endpoint": "http://9.15.87.94:1065/v1/chat/completions",
+  "model": "Qwen3-32B",
+  "api_key_env": null,
+  "dataset_path": "D:\\AISF\\AISF_0729_segment\\eval-python\\data\\sessions_case.json",
+  "system_prompt": "请分析以下多轮用户请求的主要意图，并返回简洁、明确的分析结果。",
+  "temperature": 0.0,
+  "enable_thinking": true,
+  "max_tokens": 512,
+  "verify_tls": false,
+  "bypass_proxy": true,
+  "timeout_seconds": 180,
+  "concurrency_levels": [1, 5, 10, 20, 30, 40, 50],
+  "requests_per_level": null,
+  "repeats": 3,
+  "failed_repeats_to_stop": 2,
+  "warmup_requests": 5,
+  "cooldown_seconds": 15,
+  "stop_on_failure": true,
+  "max_failure_rate": 0.0
+}
